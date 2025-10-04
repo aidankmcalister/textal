@@ -1,11 +1,19 @@
 # Source files
 src/
+index.ts
 
 # Test files
 __tests__/
+tests/
 *.test.*
+*.spec.*
 
-# Build files
+# Build configuration
+tsconfig.json
+.prettierrc
+.eslintrc.json
+
+# Build files (source maps)
 dist/**/*.map
 dist/**/*.d.ts.map
 
@@ -13,6 +21,13 @@ dist/**/*.d.ts.map
 .vscode/
 .idea/
 *.log
+.github/
+
+# Documentation (keep README.md)
+CONTRIBUTING.md
+
+# Scripts
+scripts/
 
 # Environment files
 .env
@@ -24,6 +39,11 @@ coverage/
 
 # Node modules
 node_modules/
+
+# Git files
+.git/
+.gitignore
+.gitattributes
 
 # OS generated files
 .DS_Store
