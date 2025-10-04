@@ -4,6 +4,5 @@ export * from "./camelCase";
 export * from "./kebabCase";
 export * from "./snakeCase";
 export * from "./truncate";
-export * from "./padStart";
-export * from "./padEnd";
+export * from "./pad";
 export * from "./stripChars";
