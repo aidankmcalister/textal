@@ -1,8 +1,8 @@
 {
-  "name": "textly",
+  "name": "textkit",
   "version": "0.0.1",
-  "description": "",
-  "license": "ISC",
+  "description": "Tiny, dependency-free text utilities for JS/TS",
+  "license": "MIT",
   "author": "aidankmcalister",
   "type": "module",
   "main": "index.ts",
