@@ -2,3 +2,8 @@ export * from "./contains";
 export * from "./count";
 export * from "./extract";
 export * from "./between";
+export * from "./betweenAll";
+export * from "./startsWith";
+export * from "./endsWith";
+export * from "./indexOfAll";
+export * from "./nthIndexOf";

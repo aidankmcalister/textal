@@ -1,3 +1,5 @@
+import { filterChars } from './filterChars';
+
 /**
  * Keeps only numeric characters from a string.
  * @param str - The string to filter
@@ -9,6 +11,5 @@
  */
 
 export function onlyNumeric(str: string): string {
-  if (!str) return str;
-  return str.replace(/[^0-9]/g, '');
+  return filterChars(str, { numeric: true });
 }

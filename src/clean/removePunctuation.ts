@@ -1,3 +1,5 @@
+import { filterChars } from './filterChars';
+
 /**
  * Removes punctuation characters from a string.
  * @param str - The string to remove punctuation from
@@ -9,6 +11,5 @@
  */
 
 export function removePunctuation(str: string): string {
-  if (!str) return str;
-  return str.replace(/[^\w\s]|_/g, '');
+  return filterChars(str, { alpha: true, numeric: true, spaces: true });
 }

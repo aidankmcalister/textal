@@ -6,3 +6,8 @@ export * from "./removePunctuation";
 export * from "./onlyAlpha";
 export * from "./onlyNumeric";
 export * from "./toAscii";
+export * from "./filterChars";
+export * from "./stripAnsi";
+export * from "./dedent";
+export * from "./collapseNewlines";
+export * from "./trimLines";

@@ -50,45 +50,70 @@ console.log(linkify('Visit https://example.com'));
 - `capitalize(str: string): string` - Capitalize first letter
 - `titleCase(str: string): string` - Convert to Title Case
 - `camelCase(str: string): string` - Convert to camelCase
+- `pascalCase(str: string): string` - Convert to PascalCase
 - `kebabCase(str: string): string` - Convert to kebab-case
 - `snakeCase(str: string): string` - Convert to snake_case
-- `truncate(str: string, length: number, end?: string): string` - Truncate string
+- `constantCase(str: string): string` - Convert to CONSTANT_CASE
+- `sentenceCase(str: string): string` - Convert to Sentence case
+- `noCase(str: string): string` - Convert to space-delimited lowercase
+- `slugify(str: string, opts?: { lower?: boolean, separator?: string }): string` - Convert to URL-friendly slug
+- `truncate(str: string, length: number, end?: string): string` - Truncate string by character count
+- `truncateWords(str: string, count: number, end?: string): string` - Truncate string by word count
 - `pad(str: string, length: number, options?: { side?: 'start' | 'end' | 'both', fillChar?: string }): string` - Pad string on specified side
-- `stripChars(str: string, chars: string): string` - Remove specified characters
+- `stripChars(str: string, chars?: string): string` - Remove specified characters
 
 ### Cleaning
 
 - `stripHtml(str: string): string` - Remove HTML tags
 - `escapeHtml(str: string): string` - Escape HTML entities
 - `unescapeHtml(str: string): string` - Unescape HTML entities
-- `normalizeWhitespace(str: string): string` - Normalize whitespace
+- `normalizeWhitespace(str: string, opts?: { collapse?: boolean, trim?: boolean, collapseNewlines?: boolean }): string` - Normalize whitespace with options
 - `removePunctuation(str: string): string` - Remove punctuation
 - `onlyAlpha(str: string): string` - Keep only alphabetic characters
 - `onlyNumeric(str: string): string` - Keep only numeric characters
 - `toAscii(str: string): string` - Convert to ASCII (remove diacritics)
+- `filterChars(str: string, opts: { alpha?: boolean, numeric?: boolean, spaces?: boolean, punctuation?: boolean, extras?: RegExp }): string` - Filter characters based on criteria
+- `stripAnsi(str: string): string` - Remove ANSI escape codes
+- `dedent(str: string): string` - Remove common leading indentation
+- `collapseNewlines(str: string, max?: number): string` - Collapse consecutive newlines
+- `trimLines(str: string): string` - Trim whitespace from each line
 
 ### Searching
 
 - `contains(str: string, term: string, opts?: { caseSensitive?: boolean }): boolean` - Check if string contains term
 - `count(str: string, term: string, opts?: { caseSensitive?: boolean }): number` - Count term occurrences
 - `extract(str: string, pattern: RegExp): string[]` - Extract all regex matches
-- `between(str: string, start: string, end: string): string | null` - Extract text between delimiters
+- `between(str: string, start: string, end: string): string` - Extract text between delimiters (first match)
+- `betweenAll(str: string, start: string, end: string): string[]` - Extract all text between delimiters
+- `startsWith(str: string, term: string, opts?: { caseSensitive?: boolean }): boolean` - Check if string starts with term
+- `endsWith(str: string, term: string, opts?: { caseSensitive?: boolean }): boolean` - Check if string ends with term
+- `indexOfAll(str: string, term: string, opts?: { caseSensitive?: boolean }): number[]` - Find all positions of term
+- `nthIndexOf(str: string, term: string, n: number, opts?: { caseSensitive?: boolean }): number` - Find nth occurrence position
 
 ### Styling
 
 - `wrap(str: string, tag?: string, className?: string): string` - Wrap text in HTML tag
 - `highlight(str: string, term: string, className?: string, opts?: { caseSensitive?: boolean, wholeWord?: boolean }): string` - Highlight search terms
 - `linkify(str: string, opts?: { target?: '_blank' | '_self', rel?: string, className?: string }): string` - Convert URLs to links
+- `nl2br(str: string): string` - Convert newlines to HTML `<br>` tags
 
 ### Metrics
 
 - `wordCount(str: string): number` - Count words
 - `charCount(str: string, opts?: { excludeSpaces?: boolean }): number` - Count characters
 - `readingTime(str: string, wpm?: number): { minutes: number, seconds: number, words: number }` - Estimate reading time
+- `lineCount(str: string): number` - Count lines
+- `sentenceCount(str: string): number` - Count sentences
+- `byteLength(str: string): number` - Get byte length in UTF-8
+- `graphemeCount(str: string): number` - Count grapheme clusters (user-perceived characters)
 
 ### Utilities
 
 - `escapeRegex(str: string): string` - Escape special regex characters for use in RegExp
+- `tokenizeWords(str: string): string[]` - Split string into word tokens
+- `splitLines(str: string): string[]` - Split string into lines
+- `joinLines(lines: string[]): string` - Join lines into string
+- `uniqueLines(str: string): string` - Remove duplicate lines
 
 ## Examples
 

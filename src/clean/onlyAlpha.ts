@@ -1,3 +1,5 @@
+import { filterChars } from './filterChars';
+
 /**
  * Keeps only alphabetic characters from a string.
  * @param str - The string to filter
@@ -9,6 +11,5 @@
  */
 
 export function onlyAlpha(str: string): string {
-  if (!str) return str;
-  return str.replace(/[^a-zA-Z]/g, '');
+  return filterChars(str, { alpha: true });
 }
