@@ -6,6 +6,10 @@
   "author": "aidankmcalister",
   "type": "module",
   "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidankmcalister/textal.git"
+  },
   "scripts": {
     "test": "vitest"
   },
