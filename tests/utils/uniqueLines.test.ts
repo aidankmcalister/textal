@@ -8,7 +8,9 @@ describe('uniqueLines', () => {
   });
 
   it('should preserve order of first occurrence', () => {
-    expect(uniqueLines('first\nsecond\nfirst\nthird')).toBe('first\nsecond\nthird');
+    expect(uniqueLines('first\nsecond\nfirst\nthird')).toBe(
+      'first\nsecond\nthird'
+    );
   });
 
   it('should handle strings without duplicates', () => {

@@ -47,7 +47,9 @@ describe('escapeRegex', () => {
   });
 
   it('should escape multiple special characters', () => {
-    expect(escapeRegex('.*+?^${}()|[]\\test')).toBe('\\.\\*\\+\\?\\^\\$\\{\\}\\(\\)\\|\\[\\]\\\\test');
+    expect(escapeRegex('.*+?^${}()|[]\\test')).toBe(
+      '\\.\\*\\+\\?\\^\\$\\{\\}\\(\\)\\|\\[\\]\\\\test'
+    );
   });
 
   it('should not escape regular alphanumeric characters', () => {

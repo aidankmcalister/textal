@@ -13,5 +13,7 @@ import { tokenizeWords } from '../utils/tokenizeWords';
 export function pascalCase(str: string): string {
   if (!str) return str;
   const words = tokenizeWords(str);
-  return words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join('');
+  return words
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
 }

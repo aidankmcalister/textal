@@ -11,7 +11,9 @@ describe('count', () => {
   });
 
   it('should respect case sensitivity option', () => {
-    expect(count('hello HELLO world', 'hello', { caseSensitive: true })).toBe(1);
+    expect(count('hello HELLO world', 'hello', { caseSensitive: true })).toBe(
+      1
+    );
   });
 
   it('should return zero when term not found', () => {

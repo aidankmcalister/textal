@@ -11,6 +11,9 @@
 
 export function stripChars(str: string, chars: string = ' \t\n\r'): string {
   if (!str) return str;
-  const regex = new RegExp(`[${chars.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')}]`, 'g');
+  const regex = new RegExp(
+    `[${chars.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')}]`,
+    'g'
+  );
   return str.replace(regex, '');
 }

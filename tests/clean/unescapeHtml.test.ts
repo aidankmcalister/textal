@@ -3,7 +3,9 @@ import { unescapeHtml } from '../../src/clean/unescapeHtml';
 
 describe('unescapeHtml', () => {
   it('should unescape HTML entities', () => {
-    expect(unescapeHtml('&lt;div&gt;hello&lt;/div&gt;')).toBe('<div>hello</div>');
+    expect(unescapeHtml('&lt;div&gt;hello&lt;/div&gt;')).toBe(
+      '<div>hello</div>'
+    );
   });
 
   it('should unescape ampersands', () => {
@@ -23,6 +25,8 @@ describe('unescapeHtml', () => {
   });
 
   it('should unescape multiple entities', () => {
-    expect(unescapeHtml('&lt;a href=&quot;url&quot;&gt;text &amp; more&lt;/a&gt;')).toBe('<a href="url">text & more</a>');
+    expect(
+      unescapeHtml('&lt;a href=&quot;url&quot;&gt;text &amp; more&lt;/a&gt;')
+    ).toBe('<a href="url">text & more</a>');
   });
 });

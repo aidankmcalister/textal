@@ -11,8 +11,12 @@ describe('contains', () => {
   });
 
   it('should respect case sensitivity option', () => {
-    expect(contains('hello world', 'WORLD', { caseSensitive: true })).toBe(false);
-    expect(contains('hello world', 'world', { caseSensitive: true })).toBe(true);
+    expect(contains('hello world', 'WORLD', { caseSensitive: true })).toBe(
+      false
+    );
+    expect(contains('hello world', 'world', { caseSensitive: true })).toBe(
+      true
+    );
   });
 
   it('should return false when term not found', () => {

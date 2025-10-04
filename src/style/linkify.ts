@@ -48,7 +48,9 @@ export function linkify(
     const relAttr = opts?.rel ? ` rel="${opts.rel}"` : '';
     const classAttr = opts?.className ? ` class="${opts.className}"` : '';
 
-    parts.push(`<a href="${href}"${targetAttr}${relAttr}${classAttr}>${url}</a>`);
+    parts.push(
+      `<a href="${href}"${targetAttr}${relAttr}${classAttr}>${url}</a>`
+    );
     lastIndex = regex.lastIndex;
   }
 

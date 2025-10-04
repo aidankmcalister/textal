@@ -15,7 +15,11 @@ export interface IndexOfAllOptions {
   caseSensitive?: boolean;
 }
 
-export function indexOfAll(str: string, term: string, opts: IndexOfAllOptions = {}): number[] {
+export function indexOfAll(
+  str: string,
+  term: string,
+  opts: IndexOfAllOptions = {}
+): number[] {
   if (!str || !term) return [];
 
   const { caseSensitive = true } = opts;

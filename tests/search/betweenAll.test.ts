@@ -4,7 +4,10 @@ import { betweenAll } from '../../src/search/betweenAll';
 describe('betweenAll', () => {
   it('should extract all text between tokens', () => {
     expect(betweenAll('foo (bar) (baz)', '(', ')')).toEqual(['bar', 'baz']);
-    expect(betweenAll('hello [world] and [universe]', '[', ']')).toEqual(['world', 'universe']);
+    expect(betweenAll('hello [world] and [universe]', '[', ']')).toEqual([
+      'world',
+      'universe'
+    ]);
   });
 
   it('should return empty array if no matches', () => {

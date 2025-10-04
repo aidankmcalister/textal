@@ -19,7 +19,10 @@ export interface NormalizeWhitespaceOptions {
   collapseNewlines?: boolean;
 }
 
-export function normalizeWhitespace(str: string, opts: NormalizeWhitespaceOptions = {}): string {
+export function normalizeWhitespace(
+  str: string,
+  opts: NormalizeWhitespaceOptions = {}
+): string {
   if (!str) return str;
 
   const { collapse = true, trim = true, collapseNewlines = true } = opts;

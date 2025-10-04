@@ -11,11 +11,15 @@ describe('wrap', () => {
   });
 
   it('should add class name', () => {
-    expect(wrap('hello', 'span', 'text-bold')).toBe('<span class="text-bold">hello</span>');
+    expect(wrap('hello', 'span', 'text-bold')).toBe(
+      '<span class="text-bold">hello</span>'
+    );
   });
 
   it('should escape HTML entities', () => {
-    expect(wrap('<script>alert()</script>', 'p')).toBe('<p>&lt;script&gt;alert()&lt;/script&gt;</p>');
+    expect(wrap('<script>alert()</script>', 'p')).toBe(
+      '<p>&lt;script&gt;alert()&lt;/script&gt;</p>'
+    );
   });
 
   it('should handle empty strings', () => {

@@ -10,7 +10,11 @@
  * between('no match', '[', ']') // ''
  */
 
-export function between(str: string, startToken: string, endToken: string): string {
+export function between(
+  str: string,
+  startToken: string,
+  endToken: string
+): string {
   if (!str || !startToken || !endToken) return '';
   const startIndex = str.indexOf(startToken);
   if (startIndex === -1) return '';

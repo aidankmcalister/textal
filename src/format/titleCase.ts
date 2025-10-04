@@ -10,5 +10,8 @@
 
 export function titleCase(str: string): string {
   if (!str) return str;
-  return str.toLowerCase().replace(/ +/g, ' ').replace(/\b\w/g, (match) => match.toUpperCase());
+  return str
+    .toLowerCase()
+    .replace(/ +/g, ' ')
+    .replace(/\b\w/g, (match) => match.toUpperCase());
 }

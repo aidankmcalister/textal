@@ -9,7 +9,10 @@
  * charCount('') // 0
  */
 
-export function charCount(str: string, opts?: { excludeSpaces?: boolean }): number {
+export function charCount(
+  str: string,
+  opts?: { excludeSpaces?: boolean }
+): number {
   if (!str) return 0;
   if (opts?.excludeSpaces) {
     return str.replace(/\s/g, '').length;

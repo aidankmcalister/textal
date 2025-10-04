@@ -11,5 +11,5 @@ export function sentenceCase(str: string): string {
   if (!str) return str;
   return str
     .toLowerCase()
-    .replace(/(^\s*\w|[.!?]\s+\w)/g, match => match.toUpperCase());
+    .replace(/(^\s*\w|[.!?]\s+\w)/g, (match) => match.toUpperCase());
 }

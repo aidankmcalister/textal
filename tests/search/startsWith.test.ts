@@ -8,8 +8,12 @@ describe('startsWith', () => {
   });
 
   it('should support case insensitive search', () => {
-    expect(startsWith('Hello World', 'hello', { caseSensitive: false })).toBe(true);
-    expect(startsWith('Hello World', 'HELLO', { caseSensitive: false })).toBe(true);
+    expect(startsWith('Hello World', 'hello', { caseSensitive: false })).toBe(
+      true
+    );
+    expect(startsWith('Hello World', 'HELLO', { caseSensitive: false })).toBe(
+      true
+    );
   });
 
   it('should return false for non-matching prefix', () => {

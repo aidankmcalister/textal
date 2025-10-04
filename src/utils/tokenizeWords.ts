@@ -12,7 +12,9 @@
 export function tokenizeWords(str: string): string[] {
   if (!str) return [];
   // Split on non-alphanumeric and also split camelCase
-  return str
-    .replace(/([a-z])([A-Z])/g, '$1 $2') // Split camelCase
-    .match(/[a-zA-Z0-9]+/g) || [];
+  return (
+    str
+      .replace(/([a-z])([A-Z])/g, '$1 $2') // Split camelCase
+      .match(/[a-zA-Z0-9]+/g) || []
+  );
 }

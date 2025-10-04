@@ -13,5 +13,5 @@ import { tokenizeWords } from '../utils/tokenizeWords';
 export function constantCase(str: string): string {
   if (!str) return str;
   const words = tokenizeWords(str);
-  return words.map(word => word.toUpperCase()).join('_');
+  return words.map((word) => word.toUpperCase()).join('_');
 }

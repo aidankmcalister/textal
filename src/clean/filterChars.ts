@@ -22,7 +22,10 @@ export interface FilterCharsOptions {
   extras?: RegExp;
 }
 
-export function filterChars(str: string, opts: FilterCharsOptions = {}): string {
+export function filterChars(
+  str: string,
+  opts: FilterCharsOptions = {}
+): string {
   if (!str) return str;
 
   const { alpha, numeric, spaces, punctuation, extras } = opts;

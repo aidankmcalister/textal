@@ -33,5 +33,8 @@ export function highlight(
   const flags = opts?.caseSensitive ? 'g' : 'gi';
   const regex = new RegExp(pattern, flags);
 
-  return escaped.replace(regex, (match) => `<span class="${className}">${match}</span>`);
+  return escaped.replace(
+    regex,
+    (match) => `<span class="${className}">${match}</span>`
+  );
 }

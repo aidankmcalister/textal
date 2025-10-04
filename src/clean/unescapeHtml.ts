@@ -18,5 +18,8 @@ export function unescapeHtml(str: string): string {
     '&#39;': "'",
     '&apos;': "'"
   };
-  return str.replace(/&(?:amp|lt|gt|quot|#39|apos);/g, (match) => htmlUnescapes[match]);
+  return str.replace(
+    /&(?:amp|lt|gt|quot|#39|apos);/g,
+    (match) => htmlUnescapes[match]
+  );
 }

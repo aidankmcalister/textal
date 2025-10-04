@@ -23,6 +23,8 @@ describe('escapeHtml', () => {
   });
 
   it('should escape multiple special characters', () => {
-    expect(escapeHtml('<a href="url">text & more</a>')).toBe('&lt;a href=&quot;url&quot;&gt;text &amp; more&lt;/a&gt;');
+    expect(escapeHtml('<a href="url">text & more</a>')).toBe(
+      '&lt;a href=&quot;url&quot;&gt;text &amp; more&lt;/a&gt;'
+    );
   });
 });

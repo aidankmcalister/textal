@@ -13,11 +13,19 @@ describe('filterChars', () => {
   });
 
   it('should keep alphabetic and spaces', () => {
-    expect(filterChars('hello world!', { alpha: true, spaces: true })).toBe('hello world');
+    expect(filterChars('hello world!', { alpha: true, spaces: true })).toBe(
+      'hello world'
+    );
   });
 
   it('should keep alpha, numeric, and spaces', () => {
-    expect(filterChars('hello, world 123!', { alpha: true, numeric: true, spaces: true })).toBe('hello world 123');
+    expect(
+      filterChars('hello, world 123!', {
+        alpha: true,
+        numeric: true,
+        spaces: true
+      })
+    ).toBe('hello world 123');
   });
 
   it('should return original string if no options specified', () => {

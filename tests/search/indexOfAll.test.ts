@@ -8,7 +8,9 @@ describe('indexOfAll', () => {
   });
 
   it('should support case insensitive search', () => {
-    expect(indexOfAll('Hello World', 'O', { caseSensitive: false })).toEqual([4, 7]);
+    expect(indexOfAll('Hello World', 'O', { caseSensitive: false })).toEqual([
+      4, 7
+    ]);
   });
 
   it('should return empty array if no matches', () => {

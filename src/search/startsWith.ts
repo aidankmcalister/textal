@@ -15,7 +15,11 @@ export interface StartsWithOptions {
   caseSensitive?: boolean;
 }
 
-export function startsWith(str: string, term: string, opts: StartsWithOptions = {}): boolean {
+export function startsWith(
+  str: string,
+  term: string,
+  opts: StartsWithOptions = {}
+): boolean {
   if (!str || !term) return false;
 
   const { caseSensitive = true } = opts;

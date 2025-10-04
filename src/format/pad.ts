@@ -21,11 +21,11 @@ export function pad(
 ): string {
   if (!str) str = '';
   if (str.length >= length) return str;
-  
+
   const { side = 'end', fillChar = ' ' } = options;
   const paddingLength = length - str.length;
   const padding = fillChar.repeat(Math.max(0, paddingLength));
-  
+
   switch (side) {
     case 'start':
       return padding + str;

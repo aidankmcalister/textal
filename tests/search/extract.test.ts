@@ -7,7 +7,9 @@ describe('extract', () => {
   });
 
   it('should extract emails', () => {
-    expect(extract('contact foo@bar.com or baz@qux.com', /\S+@\S+\.com/g)).toEqual(['foo@bar.com', 'baz@qux.com']);
+    expect(
+      extract('contact foo@bar.com or baz@qux.com', /\S+@\S+\.com/g)
+    ).toEqual(['foo@bar.com', 'baz@qux.com']);
   });
 
   it('should return empty array when no matches', () => {
@@ -19,7 +21,11 @@ describe('extract', () => {
   });
 
   it('should extract words', () => {
-    expect(extract('hello world foo', /\w+/g)).toEqual(['hello', 'world', 'foo']);
+    expect(extract('hello world foo', /\w+/g)).toEqual([
+      'hello',
+      'world',
+      'foo'
+    ]);
   });
 
   it('should extract with capture groups', () => {

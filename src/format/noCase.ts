@@ -13,5 +13,5 @@ import { tokenizeWords } from '../utils/tokenizeWords';
 export function noCase(str: string): string {
   if (!str) return str;
   const words = tokenizeWords(str);
-  return words.map(word => word.toLowerCase()).join(' ');
+  return words.map((word) => word.toLowerCase()).join(' ');
 }

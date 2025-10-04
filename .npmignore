@@ -1,0 +1,35 @@
+# Source files
+src/
+
+# Test files
+__tests__/
+*.test.*
+
+# Build files
+dist/**/*.map
+dist/**/*.d.ts.map
+
+# Development files
+.vscode/
+.idea/
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Coverage directory
+coverage/
+
+# Node modules
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

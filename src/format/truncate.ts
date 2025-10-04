@@ -10,7 +10,11 @@
  * truncate('hello world', 8, '…') // 'hello wo…'
  */
 
-export function truncate(str: string, length: number, ending: string = '...'): string {
+export function truncate(
+  str: string,
+  length: number,
+  ending: string = '...'
+): string {
   if (!str || str.length <= length) return str;
   return str.slice(0, length) + ending;
 }

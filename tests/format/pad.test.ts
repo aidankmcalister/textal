@@ -20,7 +20,9 @@ describe('pad', () => {
     });
 
     it('should pad start with custom character', () => {
-      expect(pad('hello', 10, { side: 'start', fillChar: '0' })).toBe('00000hello');
+      expect(pad('hello', 10, { side: 'start', fillChar: '0' })).toBe(
+        '00000hello'
+      );
     });
   });
 
@@ -31,7 +33,9 @@ describe('pad', () => {
     });
 
     it('should pad both sides with custom character', () => {
-      expect(pad('hello', 11, { side: 'both', fillChar: '-' })).toBe('---hello---');
+      expect(pad('hello', 11, { side: 'both', fillChar: '-' })).toBe(
+        '---hello---'
+      );
     });
 
     it('should handle odd padding length by adding extra to the end', () => {

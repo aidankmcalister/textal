@@ -10,7 +10,11 @@
  * truncateWords('hello world foo', 2, '...') // 'hello world...'
  */
 
-export function truncateWords(str: string, count: number, end: string = '…'): string {
+export function truncateWords(
+  str: string,
+  count: number,
+  end: string = '…'
+): string {
   if (!str) return str;
 
   const words = str.split(/\s+/);

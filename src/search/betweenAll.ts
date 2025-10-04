@@ -10,7 +10,11 @@
  * betweenAll('no match', '[', ']') // []
  */
 
-export function betweenAll(str: string, startToken: string, endToken: string): string[] {
+export function betweenAll(
+  str: string,
+  startToken: string,
+  endToken: string
+): string[] {
   if (!str || !startToken || !endToken) return [];
 
   const results: string[] = [];

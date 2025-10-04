@@ -13,5 +13,5 @@ export function camelCase(str: string): string {
   if (!str) return str;
   return str
     .replace(/[^a-zA-Z0-9]+(.)/g, (_, char) => char.toUpperCase())
-    .replace(/^[A-Z]/, char => char.toLowerCase());
+    .replace(/^[A-Z]/, (char) => char.toLowerCase());
 }

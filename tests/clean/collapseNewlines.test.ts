@@ -9,7 +9,9 @@ describe('collapseNewlines', () => {
 
   it('should collapse to specified maximum', () => {
     expect(collapseNewlines('a\n\n\n\nb', 2)).toBe('a\n\nb');
-    expect(collapseNewlines('hello\n\n\n\n\nworld', 3)).toBe('hello\n\n\nworld');
+    expect(collapseNewlines('hello\n\n\n\n\nworld', 3)).toBe(
+      'hello\n\n\nworld'
+    );
   });
 
   it('should handle strings with no consecutive newlines', () => {

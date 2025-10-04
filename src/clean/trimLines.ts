@@ -9,5 +9,8 @@
 
 export function trimLines(str: string): string {
   if (!str) return str;
-  return str.split('\n').map(line => line.trim()).join('\n');
+  return str
+    .split('\n')
+    .map((line) => line.trim())
+    .join('\n');
 }

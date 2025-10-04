@@ -123,8 +123,8 @@ console.log(linkify('Visit https://example.com'));
 import { camelCase, kebabCase, snakeCase, titleCase } from 'textal';
 
 console.log(camelCase('hello-world')); // "helloWorld"
-console.log(kebabCase('helloWorld'));  // "hello-world"
-console.log(snakeCase('helloWorld'));  // "hello_world"
+console.log(kebabCase('helloWorld')); // "hello-world"
+console.log(snakeCase('helloWorld')); // "hello_world"
 console.log(titleCase('hello world')); // "Hello World"
 ```
 
@@ -160,7 +160,11 @@ const highlighted = highlight(text, 'error', 'text-red-500');
 
 // Convert URLs to links
 const message = 'Visit https://example.com for more info';
-const linked = linkify(message, { target: '_blank', rel: 'noopener noreferrer', className: 'text-blue-500' });
+const linked = linkify(message, {
+  target: '_blank',
+  rel: 'noopener noreferrer',
+  className: 'text-blue-500'
+});
 // Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="text-blue-500">https://example.com</a> for more info
 ```
 

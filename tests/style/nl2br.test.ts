@@ -8,7 +8,9 @@ describe('nl2br', () => {
   });
 
   it('should escape HTML in the text', () => {
-    expect(nl2br('<script>\nalert()</script>')).toBe('&lt;script&gt;<br>alert()&lt;/script&gt;');
+    expect(nl2br('<script>\nalert()</script>')).toBe(
+      '&lt;script&gt;<br>alert()&lt;/script&gt;'
+    );
   });
 
   it('should handle strings without newlines', () => {

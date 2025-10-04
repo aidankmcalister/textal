@@ -15,7 +15,11 @@ export interface EndsWithOptions {
   caseSensitive?: boolean;
 }
 
-export function endsWith(str: string, term: string, opts: EndsWithOptions = {}): boolean {
+export function endsWith(
+  str: string,
+  term: string,
+  opts: EndsWithOptions = {}
+): boolean {
   if (!str || !term) return false;
 
   const { caseSensitive = true } = opts;

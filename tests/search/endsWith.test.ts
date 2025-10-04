@@ -8,8 +8,12 @@ describe('endsWith', () => {
   });
 
   it('should support case insensitive search', () => {
-    expect(endsWith('Hello World', 'world', { caseSensitive: false })).toBe(true);
-    expect(endsWith('Hello World', 'WORLD', { caseSensitive: false })).toBe(true);
+    expect(endsWith('Hello World', 'world', { caseSensitive: false })).toBe(
+      true
+    );
+    expect(endsWith('Hello World', 'WORLD', { caseSensitive: false })).toBe(
+      true
+    );
   });
 
   it('should return false for non-matching suffix', () => {

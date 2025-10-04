@@ -9,16 +9,18 @@ Thank you for your interest in contributing to Textal! We welcome contributions 
    - This creates a copy of the repository in your GitHub account
 
 2. **Clone Your Fork**
+
    ```bash
    git clone https://github.com/your-username/textal.git
    cd textal
    ```
 
 3. **Set Up the Development Environment**
+
    ```bash
    # Install dependencies
    npm install
-   
+
    # Run tests to make sure everything works
    npm test
    ```
@@ -27,6 +29,7 @@ Thank you for your interest in contributing to Textal! We welcome contributions 
 
 1. **Create a New Branch**
    Create a descriptive branch for your changes:
+
    ```bash
    git checkout -b fix/issue-description
    # or
@@ -39,20 +42,22 @@ Thank you for your interest in contributing to Textal! We welcome contributions 
    - Update documentation as needed
 
 3. **Run Tests**
+
    ```bash
    # Run all tests
    npm test
-   
+
    # Run tests in watch mode
    npm test -- --watch
    ```
 
 4. **Commit Your Changes**
+
    ```bash
    git add .
    git commit -m "Brief description of changes"
    ```
-   
+
    We follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
 5. **Push to Your Fork**

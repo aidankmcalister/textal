@@ -12,7 +12,11 @@ import { escapeHtml } from '../clean/escapeHtml';
  * wrap('<script>alert()</script>', 'p') // '<p>&lt;script&gt;alert()&lt;/script&gt;</p>'
  */
 
-export function wrap(str: string, tag: string = 'span', className: string = ''): string {
+export function wrap(
+  str: string,
+  tag: string = 'span',
+  className: string = ''
+): string {
   if (!str) return '';
 
   const escaped = escapeHtml(str);

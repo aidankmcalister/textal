@@ -17,7 +17,12 @@ export interface NthIndexOfOptions {
   caseSensitive?: boolean;
 }
 
-export function nthIndexOf(str: string, term: string, n: number, opts: NthIndexOfOptions = {}): number {
+export function nthIndexOf(
+  str: string,
+  term: string,
+  n: number,
+  opts: NthIndexOfOptions = {}
+): number {
   if (!str || !term || n < 1) return -1;
 
   const { caseSensitive = true } = opts;
