@@ -29,10 +29,11 @@ export function pad(
   switch (side) {
     case 'start':
       return padding + str;
-    case 'both':
+    case 'both': {
       const leftPadding = fillChar.repeat(Math.floor(paddingLength / 2));
       const rightPadding = fillChar.repeat(Math.ceil(paddingLength / 2));
       return leftPadding + str + rightPadding;
+    }
     case 'end':
     default:
       return str + padding;

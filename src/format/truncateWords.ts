@@ -1,5 +1,3 @@
-import { tokenizeWords } from '../utils/tokenizeWords';
-
 /**
  * Truncates a string to a specified number of words.
  * @param str - The string to truncate

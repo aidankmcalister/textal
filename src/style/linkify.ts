@@ -35,7 +35,7 @@ export function linkify(
       parts.push(escapeHtml(textBefore));
     }
 
-    let url = match[0];
+    const url = match[0];
     let href = url;
 
     // Add https:// prefix for www. URLs

@@ -66,7 +66,9 @@ describe('pad', () => {
     });
 
     it('should handle null/undefined input', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect(pad(undefined as any, 5)).toBe('     ');
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect(pad(null as any, 5)).toBe('     ');
     });
   });
