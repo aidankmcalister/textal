@@ -1,3 +1,6 @@
+import { escapeHtml } from '../clean/escapeHtml';
+import { escapeRegex } from '../utils/escapeRegex';
+
 /**
  * Highlights occurrences of a term in a string with HTML span tags.
  * @param str - The text to highlight in
@@ -19,17 +22,8 @@ export function highlight(
 ): string {
   if (!str || !term) return str;
 
-  // Escape HTML in the original string first
-  const escapeHtml = (text: string) =>
-    text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-
   const escaped = escapeHtml(str);
-  const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedTerm = escapeRegex(term);
 
   let pattern = escapedTerm;
   if (opts?.wholeWord) {

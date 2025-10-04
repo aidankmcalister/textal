@@ -1,3 +1,5 @@
+import { wordCount } from './wordCount';
+
 /**
  * Calculates the estimated reading time for a text.
  * @param str - The text to analyze
@@ -17,7 +19,7 @@ export function readingTime(
     return { minutes: 0, seconds: 0, words: 0 };
   }
 
-  const words = str.trim().split(/\s+/).length;
+  const words = wordCount(str);
   const totalMinutes = words / wpm;
   const minutes = Math.floor(totalMinutes);
   const seconds = Math.round((totalMinutes - minutes) * 60);

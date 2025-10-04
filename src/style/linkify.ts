@@ -1,3 +1,5 @@
+import { escapeHtml } from '../clean/escapeHtml';
+
 /**
  * Converts URLs in text to clickable anchor tags with escaped text.
  * @param str - The text to linkify
@@ -30,14 +32,7 @@ export function linkify(
     // Escape text before URL
     if (match.index > lastIndex) {
       const textBefore = str.slice(lastIndex, match.index);
-      parts.push(
-        textBefore
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;')
-      );
+      parts.push(escapeHtml(textBefore));
     }
 
     let url = match[0];
@@ -60,14 +55,7 @@ export function linkify(
   // Escape remaining text after last URL
   if (lastIndex < str.length) {
     const textAfter = str.slice(lastIndex);
-    parts.push(
-      textAfter
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;')
-    );
+    parts.push(escapeHtml(textAfter));
   }
 
   return parts.join('');

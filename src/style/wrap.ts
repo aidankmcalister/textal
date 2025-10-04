@@ -1,3 +1,5 @@
+import { escapeHtml } from '../clean/escapeHtml';
+
 /**
  * Wraps text in an HTML tag with escaped inner text.
  * @param str - The text to wrap
@@ -13,13 +15,7 @@
 export function wrap(str: string, tag: string = 'span', className: string = ''): string {
   if (!str) return '';
 
-  // Escape HTML entities
-  const escaped = str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+  const escaped = escapeHtml(str);
 
   const classAttr = className ? ` class="${className}"` : '';
   return `<${tag}${classAttr}>${escaped}</${tag}>`;

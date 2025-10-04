@@ -1,3 +1,5 @@
+import { escapeRegex } from '../utils/escapeRegex';
+
 /**
  * Counts the number of occurrences of a term in a string.
  * @param str - The string to search in
@@ -17,7 +19,7 @@ export function count(
 ): number {
   if (!str || !term) return 0;
 
-  const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedTerm = escapeRegex(term);
   const flags = opts?.caseSensitive ? 'g' : 'gi';
   const regex = new RegExp(escapedTerm, flags);
 

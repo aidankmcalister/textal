@@ -40,7 +40,7 @@ console.log(highlight('Error: something went wrong', 'Error', 'text-red-500'));
 // <span class="text-red-500">Error</span>: something went wrong
 
 console.log(linkify('Visit https://example.com'));
-// Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">https://example.com</a>
+// Visit <a href="https://example.com">https://example.com</a>
 ```
 
 ## API Reference
@@ -53,8 +53,7 @@ console.log(linkify('Visit https://example.com'));
 - `kebabCase(str: string): string` - Convert to kebab-case
 - `snakeCase(str: string): string` - Convert to snake_case
 - `truncate(str: string, length: number, end?: string): string` - Truncate string
-- `padStart(str: string, length: number, char?: string): string` - Pad start of string
-- `padEnd(str: string, length: number, char?: string): string` - Pad end of string
+- `pad(str: string, length: number, options?: { side?: 'start' | 'end' | 'both', fillChar?: string }): string` - Pad string on specified side
 - `stripChars(str: string, chars: string): string` - Remove specified characters
 
 ### Cleaning
@@ -87,6 +86,10 @@ console.log(linkify('Visit https://example.com'));
 - `charCount(str: string, opts?: { excludeSpaces?: boolean }): number` - Count characters
 - `readingTime(str: string, wpm?: number): { minutes: number, seconds: number, words: number }` - Estimate reading time
 
+### Utilities
+
+- `escapeRegex(str: string): string` - Escape special regex characters for use in RegExp
+
 ## Examples
 
 ### Formatting Text
@@ -116,7 +119,7 @@ console.log(normalizeWhitespace('  Hello   world!  ')); // "Hello world!"
 import { contains, count, between } from 'textal';
 
 console.log(contains('Hello world', 'WORLD')); // true (case-insensitive by default)
-console.log(count('banana', 'ana')); // 1 (non-overlapping by default)
+console.log(count('banana', 'ana')); // 2 (overlapping matches)
 console.log(between('Hello [world]', '[', ']')); // "world"
 ```
 
@@ -132,7 +135,7 @@ const highlighted = highlight(text, 'error', 'text-red-500');
 
 // Convert URLs to links
 const message = 'Visit https://example.com for more info';
-const linked = linkify(message, { className: 'text-blue-500' });
+const linked = linkify(message, { target: '_blank', rel: 'noopener noreferrer', className: 'text-blue-500' });
 // Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="text-blue-500">https://example.com</a> for more info
 ```
 
@@ -144,7 +147,7 @@ import { wordCount, charCount, readingTime } from 'textal';
 const text = 'This is a sample text.';
 
 console.log(wordCount(text)); // 5
-console.log(charCount(text)); // 19
+console.log(charCount(text)); // 22
 console.log(readingTime(text, 200));
 // { minutes: 0, seconds: 2, words: 5 }
 ```
