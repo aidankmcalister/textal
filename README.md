@@ -4,14 +4,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/textal)](https://bundlephobia.com/package/textal)
 
-A tiny, dependency-free text toolkit for formatting, cleaning, searching, and styling text in JavaScript/TypeScript. Built with simplicity, tree-shaking, and modern web development in mind.
+Lightweight text utilities for JavaScript/TypeScript. Format, clean, search, and style text with zero dependencies.
 
 ## Features
 
-- **Tiny**: Ultra lightweight with zero dependencies
-- **Modular**: Import only what you need (fully tree-shakeable)
-- **Type-Safe**: Written in TypeScript with full type definitions
-- **Safe**: HTML escaping by default to prevent XSS
+- **19 KB** minified + gzipped — smaller than most single dependencies
+- **Zero dependencies** — no bloat, no supply chain risks
+- **Tree-shakeable** — import only what you need
+- **Type-safe** — full TypeScript support with complete type definitions
 
 ## Installation
 
