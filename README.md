@@ -118,7 +118,7 @@ console.log(linkify('Visit https://example.com'));
 ### Date
 
 - `parseDate(str: string): Date` - Parse string into Date object
-- `formatDate(date: Date, format?: string): string` - Format Date object using date-fns style tokens
+- `formatDate(date: Date, format?: string): string` - Format Date object using a format string (e.g. "yyyy-MM-dd")
 
 #### Format Tokens
 
