@@ -1,4 +1,4 @@
-import { wordCount } from './wordCount';
+import { wordCount } from './wordCount.js';
 
 /**
  * Calculates the estimated reading time for a text.

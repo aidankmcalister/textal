@@ -1,4 +1,4 @@
-import { filterChars } from './filterChars';
+import { filterChars } from './filterChars.js';
 
 /**
  * Removes punctuation characters from a string.

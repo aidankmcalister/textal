@@ -1,6 +1,6 @@
 {
   "name": "textal",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Tiny, dependency-free text utilities for JS/TS",
   "license": "MIT",
   "author": "aidankmcalister",
@@ -12,14 +12,46 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.js",
-    "./clean": "./dist/clean/index.js",
-    "./format": "./dist/format/index.js",
-    "./search": "./dist/search/index.js",
-    "./metrics": "./dist/metrics/index.js",
-    "./style": "./dist/style/index.js",
-    "./utils": "./dist/utils/index.js",
-    "./dates": "./dist/dates/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./clean": {
+      "types": "./dist/clean/index.d.ts",
+      "import": "./dist/clean/index.js",
+      "require": "./dist/clean/index.js"
+    },
+    "./format": {
+      "types": "./dist/format/index.d.ts",
+      "import": "./dist/format/index.js",
+      "require": "./dist/format/index.js"
+    },
+    "./search": {
+      "types": "./dist/search/index.d.ts",
+      "import": "./dist/search/index.js",
+      "require": "./dist/search/index.js"
+    },
+    "./metrics": {
+      "types": "./dist/metrics/index.d.ts",
+      "import": "./dist/metrics/index.js",
+      "require": "./dist/metrics/index.js"
+    },
+    "./style": {
+      "types": "./dist/style/index.d.ts",
+      "import": "./dist/style/index.js",
+      "require": "./dist/style/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js"
+    },
+    "./dates": {
+      "types": "./dist/dates/index.d.ts",
+      "import": "./dist/dates/index.js",
+      "require": "./dist/dates/index.js"
+    }
   },
   "repository": {
     "type": "git",

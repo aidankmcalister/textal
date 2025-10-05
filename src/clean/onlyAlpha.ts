@@ -1,4 +1,4 @@
-import { filterChars } from './filterChars';
+import { filterChars } from './filterChars.js';
 
 /**
  * Keeps only alphabetic characters from a string.

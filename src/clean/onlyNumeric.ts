@@ -1,4 +1,4 @@
-import { filterChars } from './filterChars';
+import { filterChars } from './filterChars.js';
 
 /**
  * Keeps only numeric characters from a string.
