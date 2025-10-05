@@ -1,4 +1,4 @@
-export * from './capitalize';
+export * from './capitalizeText';
 export * from './titleCase';
 export * from './camelCase';
 export * from './kebabCase';

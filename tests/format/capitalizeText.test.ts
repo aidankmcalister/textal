@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { capitalizeText } from '../../src/format/capitalize';
+import { capitalizeText } from '../../src/format/capitalizeText';
 
 describe('capitalizeText', () => {
   it('should capitalize the first letter and lowercase the rest', () => {

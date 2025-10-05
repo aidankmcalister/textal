@@ -46,7 +46,7 @@ console.log(linkify('Visit https://example.com'));
 
 ### Formatting
 
-- `capitalize(str: string): string` - Capitalize first letter
+- `capitalizeText(str: string): string` - Capitalize first letter
 - `titleCase(str: string): string` - Convert to Title Case
 - `camelCase(str: string): string` - Convert to camelCase
 - `pascalCase(str: string): string` - Convert to PascalCase
