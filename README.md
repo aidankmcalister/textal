@@ -115,6 +115,38 @@ console.log(linkify('Visit https://example.com'));
 - `joinLines(lines: string[]): string` - Join lines into string
 - `uniqueLines(str: string): string` - Remove duplicate lines
 
+### Date
+
+- `parseDate(str: string): Date` - Parse string into Date object
+- `formatDate(date: Date, format?: string): string` - Format Date object using date-fns style tokens
+
+#### Format Tokens
+
+| Token | Output | Description |
+|-------|--------|-------------|
+| `yyyy` | 2024 | 4-digit year |
+| `yy` | 24 | 2-digit year |
+| `MMMM` | January | Full month name |
+| `MMM` | Jan | Short month name |
+| `MM` | 01-12 | 2-digit month |
+| `M` | 1-12 | Month |
+| `dd` | 01-31 | 2-digit day |
+| `d` | 1-31 | Day |
+| `EEEE` | Monday | Full day name |
+| `EEE` | Mon | Short day name |
+| `HH` | 00-23 | 2-digit 24-hour |
+| `H` | 0-23 | 24-hour |
+| `hh` | 01-12 | 2-digit 12-hour |
+| `h` | 1-12 | 12-hour |
+| `mm` | 00-59 | 2-digit minutes |
+| `m` | 0-59 | Minutes |
+| `ss` | 00-59 | 2-digit seconds |
+| `s` | 0-59 | Seconds |
+| `SSS` | 000-999 | Milliseconds |
+| `A` / `AA` | AM/PM | Uppercase AM/PM |
+| `a` / `aa` | am/pm | Lowercase am/pm |
+
+
 ## Examples
 
 ### Formatting Text
@@ -179,6 +211,23 @@ console.log(wordCount(text)); // 5
 console.log(charCount(text)); // 22
 console.log(readingTime(text, 200));
 // { minutes: 0, seconds: 2, words: 5 }
+```
+
+### Working with Dates
+
+```javascript
+import { parseDate, formatDate } from 'textal';
+
+// Parse date strings
+const date = parseDate('2024-01-15T14:30:45');
+
+// Format dates with various patterns
+console.log(formatDate(date, 'yyyy-MM-dd'));           // '2024-01-15'
+console.log(formatDate(date, 'MMMM d, yyyy'));         // 'January 15, 2024'
+console.log(formatDate(date, 'EEEE, MMM d'));          // 'Monday, Jan 15'
+console.log(formatDate(date, 'h:mm A'));               // '2:30 PM'
+console.log(formatDate(date, 'HH:mm:ss'));             // '14:30:45'
+console.log(formatDate(date, 'MM/dd/yy'));             // '01/15/24'
 ```
 
 ## Browser Support
