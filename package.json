@@ -1,6 +1,6 @@
 {
   "name": "textal",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Tiny, dependency-free text utilities for JS/TS",
   "license": "MIT",
   "author": "aidankmcalister",
@@ -12,51 +12,27 @@
     "dist"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./clean": {
-      "import": "./dist/src/clean/index.js",
-      "types": "./dist/src/clean/index.d.ts"
-    },
-    "./format": {
-      "import": "./dist/src/format/index.js",
-      "types": "./dist/src/format/index.d.ts"
-    },
-    "./search": {
-      "import": "./dist/src/search/index.js",
-      "types": "./dist/src/search/index.d.ts"
-    },
-    "./metrics": {
-      "import": "./dist/src/metrics/index.js",
-      "types": "./dist/src/metrics/index.d.ts"
-    },
-    "./style": {
-      "import": "./dist/src/style/index.js",
-      "types": "./dist/src/style/index.d.ts"
-    },
-    "./utils": {
-      "import": "./dist/src/utils/index.js",
-      "types": "./dist/src/utils/index.d.ts"
-    },
-    "./dates": {
-      "import": "./dist/src/dates/index.js",
-      "types": "./dist/src/dates/index.d.ts"
-    }
+    ".": "./dist/index.js",
+    "./clean": "./dist/clean/index.js",
+    "./format": "./dist/format/index.js",
+    "./search": "./dist/search/index.js",
+    "./metrics": "./dist/metrics/index.js",
+    "./style": "./dist/style/index.js",
+    "./utils": "./dist/utils/index.js",
+    "./dates": "./dist/dates/index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/aidankmcalister/textal.git"
   },
-  "scripts": {
-    "build": "tsc && tsc-alias",
-    "prepublishOnly": "npm run build",
-    "test": "vitest",
-    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
-    "lint": "eslint . --ext .ts,.js",
-    "lint:fix": "eslint . --ext .ts,.js --fix"
-  },
+"scripts": {
+  "build": "rm -rf dist && tsc && tsc-alias",
+  "prepublishOnly": "npm run build",
+  "test": "vitest",
+  "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+  "lint": "eslint . --ext .ts,.js",
+  "lint:fix": "eslint . --ext .ts,.js --fix"
+},
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
