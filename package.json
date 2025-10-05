@@ -1,6 +1,6 @@
 {
   "name": "textal",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Tiny, dependency-free text utilities for JS/TS",
   "license": "MIT",
   "author": "aidankmcalister",
