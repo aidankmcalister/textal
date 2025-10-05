@@ -8,10 +8,9 @@ Lightweight text utilities for JavaScript/TypeScript. Format, clean, search, and
 
 ## Features
 
-- **19 KB** minified + gzipped — smaller than most single dependencies
-- **Zero dependencies** — no bloat, no supply chain risks
-- **Tree-shakeable** — import only what you need
-- **Type-safe** — full TypeScript support with complete type definitions
+- **Tiny** - Lightweight with zero dependencies
+- **Tree-shakeable** - Import only what you need
+- **Type-safe** - Full TypeScript support with complete type definitions
 
 ## Installation
 
