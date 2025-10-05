@@ -108,7 +108,6 @@ console.log(linkify('Visit https://example.com'));
 
 ### Utilities
 
-- `copy(str: string): Promise<string>` - Copy text to clipboard
 - `escapeRegex(str: string): string` - Escape special regex characters for use in RegExp
 - `tokenizeWords(str: string): string[]` - Split string into word tokens
 - `splitLines(str: string): string[]` - Split string into lines
