@@ -1,4 +1,4 @@
-import { escapeHtml } from '../clean/escapeHtml';
+import { escapeHtml } from '../clean/escapeHtml.js';
 
 /**
  * Converts newlines to HTML <br> tags.

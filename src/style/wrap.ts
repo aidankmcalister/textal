@@ -1,4 +1,4 @@
-import { escapeHtml } from '../clean/escapeHtml';
+import { escapeHtml } from '../clean/escapeHtml.js';
 
 /**
  * Wraps text in an HTML tag with escaped inner text.

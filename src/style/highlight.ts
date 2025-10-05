@@ -1,5 +1,5 @@
-import { escapeHtml } from '../clean/escapeHtml';
-import { escapeRegex } from '../utils/escapeRegex';
+import { escapeHtml } from '../clean/escapeHtml.js';
+import { escapeRegex } from '../utils/escapeRegex.js';
 
 /**
  * Highlights occurrences of a term in a string with HTML span tags.

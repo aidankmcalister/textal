@@ -1,4 +1,4 @@
-import { tokenizeWords } from '../utils/tokenizeWords';
+import { tokenizeWords } from '../utils/tokenizeWords.js';
 
 /**
  * Converts a string to no case (space-delimited, lowercased words).

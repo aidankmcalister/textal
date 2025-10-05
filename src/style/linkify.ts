@@ -1,4 +1,4 @@
-import { escapeHtml } from '../clean/escapeHtml';
+import { escapeHtml } from '../clean/escapeHtml.js';
 
 /**
  * Converts URLs in text to clickable anchor tags with escaped text.

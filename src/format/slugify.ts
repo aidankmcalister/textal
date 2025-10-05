@@ -1,5 +1,5 @@
-import { toAscii } from '../clean/toAscii';
-import { filterChars } from '../clean/filterChars';
+import { toAscii } from '../clean/toAscii.js';
+import { filterChars } from '../clean/filterChars.js';
 
 /**
  * Converts a string to a URL-friendly slug.

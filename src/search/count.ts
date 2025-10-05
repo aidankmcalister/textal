@@ -1,4 +1,4 @@
-import { escapeRegex } from '../utils/escapeRegex';
+import { escapeRegex } from '../utils/escapeRegex.js';
 
 /**
  * Counts the number of occurrences of a term in a string.
