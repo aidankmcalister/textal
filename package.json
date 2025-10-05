@@ -1,6 +1,6 @@
 {
   "name": "textal",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Tiny, dependency-free text utilities for JS/TS",
   "license": "MIT",
   "author": "aidankmcalister",
@@ -15,6 +15,34 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./clean": {
+      "import": "./dist/src/clean/index.js",
+      "types": "./dist/src/clean/index.d.ts"
+    },
+    "./format": {
+      "import": "./dist/src/format/index.js",
+      "types": "./dist/src/format/index.d.ts"
+    },
+    "./search": {
+      "import": "./dist/src/search/index.js",
+      "types": "./dist/src/search/index.d.ts"
+    },
+    "./metrics": {
+      "import": "./dist/src/metrics/index.js",
+      "types": "./dist/src/metrics/index.d.ts"
+    },
+    "./style": {
+      "import": "./dist/src/style/index.js",
+      "types": "./dist/src/style/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/src/utils/index.js",
+      "types": "./dist/src/utils/index.d.ts"
+    },
+    "./dates": {
+      "import": "./dist/src/dates/index.js",
+      "types": "./dist/src/dates/index.d.ts"
     }
   },
   "repository": {
